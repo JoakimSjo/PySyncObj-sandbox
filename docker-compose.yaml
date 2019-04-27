@@ -1,0 +1,38 @@
+version: '3'
+services:
+  node0:
+    build: ./
+    environment:
+      MY_NODE_NUM: '0'
+      TOTAL_NODES: '5'
+    image: node
+    ports:
+      - "5000:5000"
+  node1:
+    environment:
+      MY_NODE_NUM: '1'
+      TOTAL_NODES: '5'
+    image: node
+    ports:
+      - "5001:5001"
+  node2:
+    environment:
+      MY_NODE_NUM: '2'
+      TOTAL_NODES: '5'
+    image: node
+    ports:
+      - "5002:5002"
+  node3:
+    environment:
+      MY_NODE_NUM: '3'
+      TOTAL_NODES: '5'
+    image: node
+    ports:
+      - "5003:5003"
+  node4:
+    environment:
+      MY_NODE_NUM: '4'
+      TOTAL_NODES: '5'
+    image: node
+    ports:
+      - "5004:5004"
